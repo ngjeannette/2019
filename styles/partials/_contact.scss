@@ -1,0 +1,53 @@
+main {
+  background: $colorPrimary;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .contactInfo {
+      width: 25%;
+    }
+  }
+}
+
+.contactInfo {
+  .social {
+    padding-bottom: 20px;
+
+    a {
+      padding-right: 20px;
+    }
+  }
+  align-self: center;
+  h2 {
+    @extend .heading6;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.social i {
+  @include ffSize(20);
+  color: $colorAccentLight;
+  &:hover {
+    color: $colorDark;
+  }
+}
+
+.container {
+  form {
+    position: relative;
+    top: -200px;
+    width: 65%;
+    margin-right: 0;
+    @extend .boxShadowLeft;
+    background: white;
+    padding: 5%;
+    input,
+    textarea {
+      background: white;
+    }
+  }
+}

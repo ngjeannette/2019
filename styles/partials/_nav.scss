@@ -1,0 +1,111 @@
+nav.navMain {
+  color: $colorPrimary;
+  display: flex;
+  ul {
+    height: 70px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      padding-right: 10px;
+    }
+  }
+}
+
+nav.navMain a,
+.nav a {
+  text-decoration: none;
+  color: $colorPrimary;
+  text-transform: uppercase;
+  align-self: flex-end;
+  padding-bottom: 6px;
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+nav.navMain ul li:first-child a,
+#logo {
+  @include ffSize(42);
+  font-weight: fontWeightBold;
+  font-family: $ffPrimary;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
+#logo {
+  position: absolute;
+  top: 19px;
+  left: 25px;
+  text-transform: uppercase;
+  color: $colorPrimary;
+  display: none;
+  width: 60%;
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+#hamburger {
+  color: white;
+  position: absolute;
+  right: 6.5%;
+  top: 31px;
+  display: none;
+}
+
+#cross {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: $colorPrimary;
+  font-size: 30px;
+}
+
+#logo,
+#hamburger,
+#cross {
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+  width: 50%;
+  background: $colorAccentDark;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 20;
+  ul {
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    li {
+      list-style: none;
+      display: flex;
+    }
+  }
+}
+
+.nav a {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0;
+  color: $colorPrimary;
+}
+
+.blog nav.navMain,
+#contactHeader nav.navMain {
+  background: black;
+}

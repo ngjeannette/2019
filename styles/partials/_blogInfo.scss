@@ -1,0 +1,136 @@
+main {
+  background: $colorPrimary;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  top: -200px;
+  aside {
+    position: relative;
+    padding-top: 300px;
+    width: 40%;
+  }
+}
+
+.asideImage {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  img {
+    width: 100%;
+  }
+}
+
+.asidetext {
+  padding-top: 440px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12.5%;
+  top: -350px;
+  position: relative;
+  background: white;
+  padding-left: 36px;
+  h3 {
+    @extend .heading6;
+    margin-bottom: 0;
+  }
+  p {
+    span {
+      font-style: italic;
+      font-weight: $fontWeightBold;
+      color: $colorAccentDark;
+    }
+  }
+}
+
+.asidetextFeature2 {
+  ul {
+    list-style: none;
+    font-family: $ffPrimary;
+    font-weight: $fontWeightLight;
+    @include ffSize(20);
+    padding: 0;
+    @include lh(32);
+    li:before {
+      content: "\2022";
+      color: green;
+      position: relative;
+      padding: 0 16px;
+    }
+  }
+}
+
+.blogRight {
+  width: 55%;
+  .blogInfoText {
+    border-left: 5px solid $colorAccent;
+    border-bottom: 5px solid $colorAccent;
+    position: relative;
+    left: -20px;
+    @extend .paddingSmall;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.blogInfoImage {
+  img {
+    width: 100%;
+    @extend .boxShadowLeft;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.blogInfoText {
+  margin-right: 12.5%;
+  h2 {
+    @extend .heading5;
+  }
+  h2 + p {
+    color: $colorAccentDark;
+    font-style: italic;
+  }
+  p {
+    span {
+      font-weight: $fontWeightBold;
+    }
+  }
+}
+
+.blogComment {
+  @extend .paddingSmall;
+  display: flex;
+  flex-direction: column;
+  margin-right: 14%;
+  h3 {
+    @extend .heading5;
+  }
+  .commentItem {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .commentImage {
+      width: 15%;
+    }
+  }
+}
+
+.commentImage {
+  img {
+    width: 100%;
+  }
+}
+
+.commentItemText {
+  width: 80%;
+  h4 {
+    @extend .heading7;
+    margin: 0;
+  }
+}
+
+.commentItem:last-child {
+  @extend .paddingLarge;
+}

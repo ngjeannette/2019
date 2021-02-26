@@ -1,0 +1,15 @@
+.intro {
+    background: $colorPrimary;
+    @extend .paddingLarge;
+}
+
+.introText {
+    text-align: center;
+    padding: 0 10%;
+    h2 {
+        font-family: $ffSecondary;
+        font-weight: $fontWeightBold;
+        @include ffSize(56.3);
+        margin: 0;
+    }
+}

@@ -1,0 +1,21 @@
+header {
+    @include header('../images/contact-header-1.jpg');
+    display: flex;
+    flex-wrap: wrap;
+    height: 730px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+h1 {
+    @include ffSize(166); 
+    font-family: $ffSecondary;
+    font-weight: $fontWeightLight;
+    margin: 0;
+    color: $colorAccent;
+}
+
+h1:last-child {
+    padding-bottom: 5.5rem;
+    padding-bottom: 55px;
+}

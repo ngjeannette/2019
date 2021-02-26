@@ -1,0 +1,217 @@
+// colors
+$colorPrimary: rgb(240, 239, 237);
+// Off white, #f0efed
+$colorSecondary: rgb(44, 44, 44);
+// Black, #2c2c2c
+$colorDark: rgb(4, 10, 12);
+// Black, #040a0c
+$colorAccent: rgb(248, 231, 28);
+// Sunny yellow #f8e71c
+$colorAccentLight: rgb(14, 144, 45);
+// Green #0e902d
+$colorAccentDark: rgb(7, 65, 21);
+// Forest green #074115
+// fonts
+$ffPrimary: "Roboto",
+sans-serif;
+$ffSecondary: "Josefin Sans",
+sans-serif;
+$fontWeightBold: 700;
+$fontWeightLight: 400;
+// mixins
+@mixin header($url) {
+  height: 100vh;
+  background: url($url);
+  background-size: cover;
+}
+
+@mixin ffSize($fontSize) {
+  font-size: $fontSize * 1px;
+}
+
+@mixin ls($letterSpacingSize) {
+  letter-spacing: $letterSpacingSize * 1px;
+}
+
+@mixin lh($lineHeightSize) {
+  line-height: $lineHeightSize * 1px;
+}
+
+// @extends
+.heading1 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightLight;
+  @include ffSize(166);
+}
+
+.heading2 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ffSize(80);
+  @include lh(92);
+  text-align: center;
+  color: $colorSecondary;
+}
+
+.heading3 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ffSize(56.3);
+  @include ls(1.3);
+  text-align: center;
+  color: $colorSecondary;
+}
+
+.heading4 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ffSize(43);
+  @include ls(1.3);
+  color: $colorSecondary;
+}
+
+.heading5 {
+  font-family: $ffPrimary;
+  font-weight: $fontWeightBold;
+  @include ffSize(42);
+  @include ls(1);
+  color: $colorSecondary;
+}
+
+.heading6 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ffSize(32);
+  @include ls(1);
+  color: $colorSecondary;
+}
+
+.heading7 {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ffSize(20);
+  @include lh(32);
+  color: $colorSecondary;
+}
+
+p {
+  font-family: $ffPrimary;
+  font-weight: $fontWeightLight;
+  @include ffSize(20);
+  @include lh(32);
+  color: $colorSecondary;
+  color: $colorSecondary;
+}
+
+input,
+textarea {
+  font-family: $ffSecondary;
+  font-weight: $fontWeightLight;
+  font-size: 20px;
+  @include lh(32);
+}
+
+body {
+  background: $colorPrimary;
+}
+
+.paddingLarge {
+  padding: 150px 0;
+}
+
+.paddingSmall {
+  padding: 30px 0;
+}
+
+// Container
+.container {
+  max-width: 1600px;
+  min-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+// Button
+.cta {
+  text-decoration: none;
+  color: white;
+  background: $colorAccentLight;
+  padding: 20px 40px;
+  display: inline-block;
+  @include ffSize(20);
+  font-family: $ffSecondary;
+  font-weight: $fontWeightBold;
+  @include ls(1);
+  text-align: center;
+  &:hover {
+    background: $colorDark;
+    color: $colorPrimary;
+  }
+}
+
+// images box shadows
+.boxShadowRight {
+  box-shadow: 20px 20px $colorAccent;
+}
+
+.boxShadowLeft {
+  box-shadow: -20px 20px $colorAccent;
+}
+
+#name:focus,
+#email:focus,
+#comment:focus,
+#message:focus {
+  background-color: $colorAccentLight;
+}
+
+input {
+  font-size: 20px;
+}
+
+// Skip link
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+  background: white;
+  z-index: 999;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.loading {
+  background: black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  h1 {
+    color: $colorPrimary;
+  }
+}
+
+// source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loading_buttons
+.buttonload {
+  position: relative;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 30px 30px;
+  font-size: 60px;
+  margin-top: 10px;
+}

@@ -1,0 +1,13 @@
+.gallery {
+    background: white;
+    .container {
+        @extend .paddingLarge;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        img {
+            width: 31%;
+            object-fit: cover;
+        }
+    }
+}

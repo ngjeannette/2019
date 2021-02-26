@@ -1,0 +1,54 @@
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    justify-content: space-between;
+    .featureLeft {
+        width: 40%;
+    }
+    .featureRight {
+        width: 50%;
+    }
+    .featureLeft,
+    .featureRight {
+        img {
+            height: 400px;
+            width: 100%;
+            position: relative;
+            object-fit: cover;
+        }
+        .discoverText {
+            margin: 0 0 0 15.25%;
+            margin-top: 20px;
+        }
+        .upcomingWorkshopsText {
+            margin: 0 15.25% 0 0;
+            margin-top: 100px;
+        }
+    }
+}
+
+img.right {
+    @extend .boxShadowLeft;
+    bottom: -20px;
+}
+
+img.left {
+    @extend .boxShadowRight;
+    top: -20px;
+}
+
+.discoverText,
+.upcomingWorkshopsText {
+    height: 303px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+        @extend .heading6;
+        margin: 0;
+    }
+    .cta {
+        width: 200px;
+    }
+}

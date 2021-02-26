@@ -1,0 +1,50 @@
+.info {
+  background: $colorPrimary;
+  @extend .paddingLarge;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    .infoItem {
+      width: 50%;
+    }
+  }
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  &:hover .circle {
+    background: $colorAccentLight;
+  }
+  &:hover h3 {
+    color: $colorAccentLight;
+  }
+  .circle {
+    background: $colorAccent;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+  }
+  .infoText {
+    width: 85%;
+    h3 {
+      @extend .heading6;
+      margin: 0;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.fas:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+i {
+  @include ffSize(25);
+}

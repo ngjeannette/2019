@@ -1,0 +1,29 @@
+.founder {
+    background: $colorPrimary;
+    img {
+        max-width: 100%;
+    }
+    .container {
+        @extend .paddingLarge;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .imageFounder {
+            width: 30%;
+        }
+        img {
+            width: 100%;
+            @extend .boxShadowRight;
+        }
+        .founderText {
+            width: 60%;
+        }
+    }
+}
+
+.founderText {
+    h2 {
+        @extend .heading5;
+        margin: 0;
+    }
+}

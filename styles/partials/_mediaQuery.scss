@@ -1,0 +1,262 @@
+@media (max-width: 1500px) {
+  .blogRight {
+    width: 53%;
+  }
+}
+
+@media (max-width: 1400px) {
+  h1 {
+    @include ffSize(100);
+  }
+  #contactSection .container {
+    form {
+      width: 55%;
+    }
+    .contactInfo {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  p {
+    @include ffSize(17);
+  }
+  h1 {
+    @include ffSize(100);
+  }
+  #contactSection .container form {
+    position: static;
+    box-shadow: none;
+  }
+  #contactSection .container form {
+    width: 100%;
+  }
+  .grid1,
+  .grid2 {
+    grid-column: span 2;
+  }
+  .contactInfo {
+    padding-bottom: 10rem;
+    padding-bottom: 100px;
+  }
+  #contactSection {
+    padding: 10rem 0;
+    padding: 100px 0;
+  }
+  #blog {
+    top: 0;
+    margin: 0 4.16% 0 4.16%;
+    aside {
+      padding-top: 100px;
+      width: 100%;
+      .asideImage {
+        width: 100%;
+      }
+      .asidetext {
+        top: 0;
+        padding: 0 4.16% 0 4.16%;
+        margin: 0;
+      }
+    }
+    .blogRight {
+      width: 100%;
+      padding: 100px 0;
+    }
+  }
+  .asideImage img {
+    display: block;
+  }
+  .blogInfoImage img {
+    display: block;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  .blogRight .blogInfoText {
+    border: none;
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 4.16% 0 4.16%;
+  }
+  .blogComment,
+  .blogform {
+    margin: 0 4.16% 0 4.16%;
+  }
+  .blogComment .commentItem {
+    padding: 3rem 0;
+    padding: 30px 0;
+  }
+  #contactSection .container .contactInfo {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    @include ffSize(80);
+  }
+  .introText {
+    h2 {
+      @include ffSize(50);
+      margin: 0;
+    }
+  } // FEATURE
+  .feature {
+    .featureRight {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .featureLeft,
+    .featureRight {
+      width: 100%;
+      img.right,
+      img.left {
+        box-shadow: none;
+      }
+      img.right {
+        position: static;
+      }
+      .discoverText,
+      .upcomingWorkshopsText {
+        padding-right: 0;
+        padding-left: 0;
+        margin: 20px 6.25%;
+        height: auto;
+        padding-top: 0;
+      }
+      .discoverText {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .introText {
+    h2 {
+      @include ffSize(50);
+      margin: 0;
+    }
+  }
+  header .headerimage {
+    display: none;
+  } // Info
+  .info {
+    .container {
+      .infoItem {
+        width: 100%;
+      }
+    }
+  } // FOUNDER
+  .founder {
+    .container {
+      .imageFounder {
+        width: 100%;
+      }
+      img {
+        box-shadow: none;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+      .founderText {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  } // GALLERY
+  .gallery {
+    .container {
+      img {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      img:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .blogComment .commentItem .commentImage {
+    width: 25%;
+  }
+  .commentItemText {
+    width: 100%;
+  }
+  #contactSection .container .contactInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #indexHeader h1 + h1 {
+    color: $colorAccent;
+    position: relative;
+    top: -15px;
+    left: -5px;
+  }
+  h1,
+  .blog .container h1 {
+    @include ffSize(64);
+  }
+  #logo {
+    display: block;
+  }
+  nav.navMain {
+    display: none;
+  }
+  .blogInfoImage img {
+    z-index: 4;
+  }
+  #hamburger {
+    display: block;
+  }
+  #contactHeader {
+    .container {
+      display: flex;
+      height: 100%;
+      .headerText {
+        align-self: flex-end;
+        padding-bottom: 5rem;
+        padding-bottom: 50px;
+        h1 {
+          margin-bottom: 40px;
+        }
+        h1:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .griditem input,
+  .griditem textarea {
+    padding: 20px 2px;
+  }
+  .contactInfo h2 {
+    @include ffSize(22);
+  }
+}
+
+@media (max-width: 400px) {
+  .blog .container h1 .introText {
+    h2 {
+      @include ffSize(25);
+      margin: 0;
+    }
+  }
+  .discoverText h3,
+  .upcomingWorkshopsText h3,
+  .infoItem .infoText h3 {
+    @include ffSize(23);
+  }
+  .heading5,
+  .blogInfoText h2,
+  .blogComment h3 {
+    @include ffSize(32);
+  }
+  .commentItemText h4 {
+    width: 100%;
+  }
+}

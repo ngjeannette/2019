@@ -1,0 +1,45 @@
+header {
+  @include header("../images/home-image-1.jpg");
+  height: 730px;
+  .header {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    height: 100%;
+    .headerText {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+.headerimage {
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+
+h1 {
+  @include ffSize(166);
+  font-family: $ffSecondary;
+  font-weight: $fontWeightLight;
+  margin: 0;
+  color: $colorPrimary;
+}
+
+h1+h1 {
+  color: $colorAccent;
+  position: relative;
+  top: -22px;
+  left: -2px;
+}
+
+h1:first-child {
+  position: relative;
+  left: -5px;
+  padding-bottom: 10px;
+}
