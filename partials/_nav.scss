@@ -1,0 +1,35 @@
+#mainNavbar.scrolled {
+  background: $primaryColor;
+  transition: all 200ms;
+}
+
+#mainNavbar .container {
+  padding-right: 0;
+}
+
+.navbar {
+  padding: 0;
+}
+
+#mainNavbar {
+  padding: 0;
+  transition: all 200ms;
+}
+
+.navbar-toggler {
+  margin: 0.4rem 0;
+}
+
+#navbarSupportedContent {
+  ul {
+    li:last-child {
+      a {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+a.nav-link {
+  font-size: 1.5rem;
+}

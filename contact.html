@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png" />
+
+    <link type="image/png" href="images/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="styles/styleContact.css" />
+  </head>
+  <body>
+    <a href="#contactSection" class="skip-link">Skip to main content.</a>
+
+    <header id="contactHeader">
+      <a href="planted.html" id="logo">Planted</a>
+
+      <img
+        src="images/hamburger-menu.svg"
+        alt="hamburger navigation bar"
+        id="hamburger"
+      />
+      <div class="nav">
+        <p><i class="fas fa-times" id="cross"></i></p>
+        <ul>
+          <li><a href="planted.html">Home</a></li>
+          <li><a href="planted.html#mainContent">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <nav class="navMain">
+        <div class="container">
+          <ul>
+            <li><a href="planted.html">Planted</a></li>
+            <li><a href="planted.html">Home</a></li>
+            <li><a href="planted.html#mainContent">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="headerText">
+          <h1>Get in</h1>
+          <h1>Touch</h1>
+        </div>
+      </div>
+    </header>
+    <main id="contactSection">
+      <div class="container">
+        <!-- Contact information -->
+        <div class="contactInfo">
+          <div class="social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <h2>info@email.com</h2>
+          <p>123 - 456 - 7890</p>
+          <p>123 Queen Street West, Unit 10</p>
+          <p>Toronto, Ontario</p>
+          <p>M5V2D5</p>
+        </div>
+
+        <!-- Form -->
+        <form action="" method="POST" autocomplete id="contactform">
+          <div class="container2">
+            <div class="griditem grid1">
+              <label for="name" class="visuallyhidden">Name</label>
+              <input type="text" placeholder="Name" id="name" />
+            </div>
+
+            <div class="griditem grid2">
+              <label for="email" class="visuallyhidden">Email Address</label>
+              <input type="email" id="email" placeholder="Email address" />
+            </div>
+
+            <div class="griditem grid3">
+              <label for="comment" class="visuallyhidden">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="8"
+                placeholder="Message"
+              ></textarea>
+            </div>
+
+            <div class="griditem grid4">
+              <a href="#" class="cta">Submit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2018 HackerYou</p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function() {
+        $("#hamburger").on("click", function() {
+          console.log("hi");
+
+          $(".nav").slideToggle("slow", function() {});
+          $(".nav").addClass("active");
+        });
+      });
+      $(`#cross`).on("click", function() {
+        $(".nav").slideToggle("slow", function() {});
+      });
+    </script>
+  </body>
+</html>

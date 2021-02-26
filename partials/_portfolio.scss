@@ -1,0 +1,36 @@
+.portfolio {
+  h2 {
+    margin-bottom: 0;
+  }
+  padding: 20px 0;
+  .portfolioImages {
+    max-width: 500px;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  h4 {
+    color: $primaryColor;
+  }
+}
+
+.portfolioImages {
+  margin: 0 auto;
+}
+
+.portfolio:last-child {
+  padding-bottom: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.projectLinks {
+  a.cta {
+    margin-right: 15px;
+  }
+  a.cta:last-child {
+    margin-right: 0;
+  }
+}

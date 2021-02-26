@@ -1,0 +1,96 @@
+//color
+$primaryColor: #8d79d4;
+$secondaryColor: #fbf1fd;
+$white: white;
+$black: black;
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-width: 320px;
+  &-2 {
+    width: 70%;
+    margin: 0 auto;
+  }
+  &-3 {
+    margin: 0 auto;
+  }
+}
+
+//fonts
+$font: "Muli", sans-serif;
+$mainHeadingSizeFont: 3rem;
+$headingSizeFont: 2rem;
+$bodySizeFont: 1rem;
+$fontBold: 700;
+$fontLight: 400;
+body {
+  font-size: 62.5%;
+  font-family: $font;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+//cta
+a {
+  text-decoration: none;
+  a:hover,
+  a:focus,
+  a:active {
+    cursor: pointer;
+  }
+  &.cta {
+    background: $primaryColor;
+    color: white;
+    border-radius: 40px;
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid $primaryColor;
+  }
+  &.cta:hover,
+  &.cta:focus,
+  &.cta:active {
+    color: black;
+    background: #fbf1fd;
+    border: 1px solid $primaryColor;
+  }
+}
+
+h1 {
+  font-size: $mainHeadingSizeFont;
+}
+
+h2 {
+  font-size: $headingSizeFont;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: $bodySizeFont;
+}
+
+a {
+  font-size: $bodySizeFont;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}

@@ -1,0 +1,118 @@
+.contact {
+  background: url("./photo/vectorObject.png") fixed;
+  background-size: cover;
+  background-position: right;
+  h2 {
+    margin-top: 0;
+    color: $white;
+  }
+}
+
+.contactHeading {
+  text-align: center;
+}
+
+.contactMethod {
+  display: flex;
+  margin: 10px 0;
+  color: $white;
+  justify-content: center;
+  span {
+    align-self: center;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+}
+
+.contactMethod:hover,
+.contactMethod:focus,
+.contactMethod:active {
+  color: lightgray;
+}
+
+.contactContainer {
+  padding: 25px;
+  background: #5e57a8;
+  border-radius: 10px;
+  box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.2), -1px -1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  h2 {
+    margin-top: 0;
+  }
+  .socialBar {
+    text-align: center;
+    a {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      i {
+        color: $white;
+      }
+      i:hover,
+      i:focus,
+      i:active {
+        color: lightgray;
+      }
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+form {
+  input {
+    min-width: 100%;
+    height: 2rem;
+    padding-left: 5px;
+  }
+  textarea {
+    min-width: 100%;
+    height: 3rem;
+    border: 1px solid $primaryColor;
+    padding-left: 5px;
+  }
+  input,
+  textarea {
+    font-size: 1rem;
+    border-radius: 11px;
+    border: 1px solid $white;
+    margin-top: 1px;
+  }
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    background: lightgray;
+  }
+  label {
+    font-size: $bodySizeFont;
+    color: $white;
+  }
+  .contactInput {
+    padding-bottom: 20px;
+  }
+  .contactInput:last-child {
+    padding-bottom: 0;
+  }
+  button {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    &.cta {
+      background: $primaryColor;
+      color: $white;
+      border-radius: 40px;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 1rem;
+      border: 1px solid $primaryColor;
+    }
+    &.cta:hover,
+    &.cta:focus,
+    &.cta:active {
+      color: black;
+      background: $secondaryColor;
+      border: 1px solid $secondaryColor;
+    }
+  }
+}

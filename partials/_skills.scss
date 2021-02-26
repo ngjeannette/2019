@@ -1,0 +1,32 @@
+.skill {
+  background: url("./photo/vectorObject.png") fixed;
+  background-size: cover;
+  h2 {
+    color: $white;
+  }
+}
+
+.skillContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: calc(100% / 5);
+  text-align: center;
+  color: $white;
+  .fab {
+    font-size: 45px;
+  }
+  img {
+    width: 43px;
+  }
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.icon:nth-child(n + 6) {
+  padding-top: 17px;
+}

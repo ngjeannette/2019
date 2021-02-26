@@ -1,0 +1,111 @@
+@media screen and (min-width: 450px) {
+  .icon {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    width: 75%;
+  }
+  .container-3 {
+    display: flex;
+    justify-content: space-between;
+    .contactMethod {
+      width: 40%;
+      display: flex;
+      align-self: baseline;
+      justify-content: flex-start;
+    }
+    form {
+      width: 55%;
+      input {
+        font-size: 1.2rem;
+      }
+      button.cta {
+        width: 100px;
+      }
+    }
+  }
+  button.cta-nav {
+    display: none;
+  }
+  .mobileBar,
+  #mobile {
+    display: none;
+  }
+  #desktop {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .overlay {
+    right: 0;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .headerText h1,
+  h1 {
+    font-size: 5rem;
+  }
+  h2,
+  .headerText h2 {
+    font-size: 2.5rem;
+  }
+  .about {
+    .container {
+      flex-direction: row;
+      .aboutContent {
+        width: 50%;
+      }
+      .aboutImage {
+        width: 200px;
+        align-self: center;
+      }
+    }
+  }
+  .socialBar {
+    text-align: left;
+  }
+  .contactContainer {
+    .contactMethod {
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .contactHeading {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      width: 40%;
+      text-align: left;
+    }
+    .socialBar {
+      width: 55%;
+      padding-top: 13px;
+      text-align: left;
+    }
+  }
+  .portfolio {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    .portfolioContent {
+      width: 50%;
+    }
+    .portfolioImages {
+      width: 47%;
+      align-self: center;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+  .portfolio:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+}

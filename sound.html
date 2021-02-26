@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="soundsstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.core.min.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+
+      var keyDataArray = [
+        {
+          key: 'q',
+          sound: 'bubbles',
+          color: '#1abc9c',
+        },
+        {
+          key: 'w',
+          sound: 'clay',
+          color: '#2ecc71',
+        },
+        {
+          key: 'e',
+          sound: 'confetti',
+          color: '#3498db',
+        },
+        {
+          key: 'r',
+          sound: 'corona',
+          color: '#9b59b6',
+        },
+        {
+          key: 't',
+          sound: 'dotted-spiral',
+          color: '#34495e',
+        },
+        {
+          key: 'y',
+          sound: 'flash-1',
+          color: '#16a085',
+        },
+        {
+          key: 'u',
+          sound: 'flash-2',
+          color: '#27ae60',
+        },
+        {
+          key: 'i',
+          sound: 'flash-3',
+          color: '#2980b9',
+        },
+        {
+          key: 'o',
+          sound: 'glimmer',
+          color: '#8e44ad',
+        },
+        {
+          key: 'p',
+          sound: 'moon',
+          color: '#2c3e50',
+        },
+        {
+          key: 'a',
+          sound: 'pinwheel',
+          color: '#f1c40f',
+        },
+        {
+          key: 's',
+          sound: 'piston-1',
+          color: '#e67e22',
+        },
+        {
+          key: 'd',
+          sound: 'piston-2',
+          color: '#e74c3c',
+        },
+        {
+          key: 'r',
+          sound: 'prism-1',
+          color: '#95a5a6',
+        },
+        {
+          key: 'g',
+          sound: 'prism-2',
+          color: '#f39c12',
+        },
+        {
+          key: 'h',
+          sound: 'prism-3',
+          color: '#d35400',
+        },
+        {
+          key: 'j',
+          sound: 'splits',
+          color: '#1abc9c',
+        },
+        {
+          key: 'k',
+          sound: 'strike',
+          color: '#2ecc71',
+        },
+        {
+          key: 'l',
+          sound: 'strike',
+          color: '#3498db',
+        },
+        {
+          key: 'z',
+          sound: 'suspension',
+          color: '#9b59b6',
+        },
+        {
+          key: 'x',
+          sound: 'timer',
+          color: '#34495e',
+        },
+        {
+          key: 'c',
+          sound: 'ufo',
+          color: '#16a085',
+        },
+        {
+          key: 'v',
+          sound: 'veil',
+          color: '#27ae60',
+        },
+        {
+          key: 'b',
+          sound: 'wipe',
+          color: '#2980b9',
+        },
+        {
+          key: 'n',
+          sound: 'zig-zag',
+          color: '#8e44ad',
+        },
+        {
+          key: 'm',
+          sound: 'moon',
+          color: '#2c3e50',
+        },
+      ]
+
+      function keyDataReducer(accumulator, current) {
+        accumulator[current.key] = {
+          sound: new Howl({
+            src: ['sounds/' + current.sound + '.mp3']
+          }),
+          color: current.color
+        }
+        return accumulator
+      }
+
+      var keyDataObject = keyDataArray.reduce(keyDataReducer, {})
+
+      var keyData = {
+        q: {
+          sound: new Howl({
+            src: ['sounds/bubbles.mp3']
+          }),
+          color: '#1abc9c'
+        },
+        w: {
+          sound: new Howl({
+            src: ['sounds/clay.mp3']
+          }),
+          color: '#2ecc71'
+        },
+        e: {
+          sound: new Howl({
+            src: ['sounds/confetti.mp3']
+          }),
+          color: '#3498db'
+        },
+        r: {
+          sound: new Howl({
+            src: ['sounds/corona.mp3']
+          }),
+          color: '#9b59b6'
+        },
+        t: {
+          sound: new Howl({
+            src: ['sounds/dotted-spiral.mp3']
+          }),
+          color: '#34495e'
+        },
+        y: {
+          sound: new Howl({
+            src: ['sounds/flash-1.mp3']
+          }),
+          color: '#16a085'
+        },
+        u: {
+          sound: new Howl({
+            src: ['sounds/flash-2.mp3']
+          }),
+          color: '#27ae60'
+        },
+        i: {
+          sound: new Howl({
+            src: ['sounds/flash-3.mp3']
+          }),
+          color: '#2980b9'
+        },
+        o: {
+          sound: new Howl({
+            src: ['sounds/glimmer.mp3']
+          }),
+          color: '#8e44ad'
+        },
+        p: {
+          sound: new Howl({
+            src: ['sounds/moon.mp3']
+          }),
+          color: '#2c3e50'
+        },
+        a: {
+          sound: new Howl({
+            src: ['sounds/pinwheel.mp3']
+          }),
+          color: '#f1c40f'
+        },
+        s: {
+          sound: new Howl({
+            src: ['sounds/piston-1.mp3']
+          }),
+          color: '#e67e22'
+        },
+        d: {
+          sound: new Howl({
+            src: ['sounds/piston-2.mp3']
+          }),
+          color: '#e74c3c'
+        },
+        f: {
+          sound: new Howl({
+            src: ['sounds/prism-1.mp3']
+          }),
+          color: '#95a5a6'
+        },
+        g: {
+          sound: new Howl({
+            src: ['sounds/prism-2.mp3']
+          }),
+          color: '#f39c12'
+        },
+        h: {
+          sound: new Howl({
+            src: ['sounds/prism-3.mp3']
+          }),
+          color: '#d35400'
+        },
+        j: {
+          sound: new Howl({
+            src: ['sounds/splits.mp3']
+          }),
+          color: '#1abc9c'
+        },
+        k: {
+          sound: new Howl({
+            src: ['sounds/squiggle.mp3']
+          }),
+          color: '#2ecc71'
+        },
+        l: {
+          sound: new Howl({
+            src: ['sounds/strike.mp3']
+          }),
+          color: '#3498db'
+        },
+        z: {
+          sound: new Howl({
+            src: ['sounds/suspension.mp3']
+          }),
+          color: '#9b59b6'
+        },
+        x: {
+          sound: new Howl({
+            src: ['sounds/timer.mp3']
+          }),
+          color: '#34495e'
+        },
+        c: {
+          sound: new Howl({
+            src: ['sounds/ufo.mp3']
+          }),
+          color: '#16a085'
+        },
+        v: {
+          sound: new Howl({
+            src: ['sounds/veil.mp3']
+          }),
+          color: '#27ae60'
+        },
+        b: {
+          sound: new Howl({
+            src: ['sounds/wipe.mp3']
+          }),
+          color: '#2980b9'
+        },
+        n: {
+          sound: new Howl({
+            src: ['sounds/zig-zag.mp3']
+          }),
+          color: '#8e44ad'
+        },
+        m: {
+          sound: new Howl({
+            src: ['sounds/moon.mp3']
+          }),
+          color: '#2c3e50'
+        }
+      }
+
+      var currentShape = 'circle';
+
+      function addSetShapeClickListener(id, shape) {
+        element = document.getElementById(id);
+        element.addEventListener('click', function () {
+          currentShape = shape
+        })
+      }
+
+      addSetShapeClickListener('title', 'circle')
+      addSetShapeClickListener('circle', 'circle')
+      addSetShapeClickListener('rectangle', 'rectangle')
+      addSetShapeClickListener('line', 'line')
+
+      var isVolume = false;
+      var shapes = [];
+
+      volumeButton = document.querySelector('.slider');
+      volumeButton.addEventListener('click', function () {
+        isVolume = !isVolume
+      })
+      function onKeyDown(event) {
+        if (keyData[event.key]) {
+          // When a key is pressed, set the content of the text item:
+          //create array of empty shapes array, then add it to circle which is then loop onframe
+          var maxPoint = new Point(view.size.width - 250, view.size.height - 250);
+
+          var randomPoint = Point.random();
+          var point = maxPoint * randomPoint;
+
+          if (currentShape === "rectangle") {
+            var newShape = new Path.Rectangle([point.x, point.y], [500, 500]);
+          } else if (currentShape === "line") {
+            var newShape = new Path.Rectangle([point.x, 0], [200, view.size.height]);
+          } else {
+            var newShape = new Path.Circle(point, 500)
+          }
+          newShape.fillColor = keyData[event.key].color;
+          //set location and color into array
+          shapes.push(newShape)
+          if (isVolume) {
+            keyData[event.key].sound.play()
+          }
+        }
+      }
+      //Anytime there's a new frame, the hue color changes.
+      function onFrame(event) {
+        for (var i = 0; i < shapes.length; i++) {
+          //loop through shapes, for each of them, we change color and scale
+          shapes[i].fillColor.hue += 1;
+          shapes[i].scale(0.9);
+          shapes[i].pop
+        }
+      }
+    </script>
+    <title>SoundBox</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" id="title">Sound!</a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <img src="circle.svg" id="circle" alt="" />
+          <span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item">
+          <img src="rectangle.svg" id="rectangle" alt="" />
+        </li>
+        <li class="nav-item">
+          <img src="line.svg" id="line" alt="" />
+        </li>
+        <li class="nav-item">
+          <div id="volume">
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"
+                ><i class="fas fa-volume-mute"></i>
+                <i class="fas fa-volume-up"></i
+              ></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- canvas -->
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>
